@@ -3,17 +3,22 @@
 ## This is Inception Assignment 01
 ***
 ### Q.1 What is Emmet ?
-    Emmet is a tool which makes development easy. It provides intelligence. It helps in suggesting the word which can be used.
-Ex: suppose if we type html:5  and then press enter it will generate basic html 5 skeleton.
+    Emmet is a tool which makes development easy.
+    It provides intelligence. It helps in suggesting the word which can be used.
+    Ex: suppose if we type html:5  and then press enter it will generate basic html 5 skeleton.
 ### Q.2 Difference between a library and framework.
 #### Framework :
-    1. Frameworks have any no of libraries, api, compiler to provide the full fledge env for development of application. And we can’t combine with other frameworks.
+    1. Frameworks have any no of libraries, api, compiler to provide the full fledge env for development of application.
+    We can’t combine with other frameworks.
     2. We cannot use framework between the development. Example:: Angular,NextJs.
 #### Library :
     1. Library is set of function and class which provide the reusability of code.
-    2.	with the help of library, we can design application as we want because it is totally in your hand to decide the flow of the application. And we can use library in small portion of application. Like in header or footer or in any particular div we can import react Example :: React, JQuery.
+    2. With the help of library, we can design application as we want because it is totally in your hand to decide the flow of the application.
+    3. We can use library in small portion of application. Like in header or footer or in any particular div we can import react Example : React, JQuery.
 ### Q.3 What is CDN why we use it?
- CDN full form is content delivery network. CDN provide the fast access to resources because every company or application provide the resources of chunk to all the server across the globe or the multiple places so that the client get the fast result. We use CDN for the fast delivery of our Resources. But we won’t able to work with CDN’s in offline as it requires network connectivity.
+ CDN full form is content delivery network.
+ CDN provide the fast access to resources because every company or application provide the resources of chunk to all the server across the globe or the multiple places so that the client get the fast result.
+ We use CDN for the fast delivery of our Resources. But we won’t able to work with CDN’s in offline as it requires network connectivity.
 ### Q.4 What is the Difference between React and ReactDOM 
 #### React :
 React have different set of function by which user can create objects that can be Java script object only. It contains different react api’s which written in javascript. 
