@@ -108,3 +108,14 @@ Note: Patch updates are very small security changes in a package that is why the
 It is used for automatically updating the minor updates along with patch updates. 
 Example: The ^1.2.4 will update all the future Minor and patch updates, for example, ^1.2.4 will automatically change the dependency to 1.x.x if any update occurs. 
 Using caret notation it is important to look at our code regularly if it is compatible with the newest version or not.
+
+### Assignment 3 Laying foundation
+#### What is JSX?
+JSX is build inside React to make delelopers life easy and smooth. Without JSX it is very difficult to create react elements or functions.
+It is HTML  -LIKE syntax but not html.
+#### Superpowers of JSX
+With the help of JSX we can have html inside javascript and javascript inside html.
+It is very easy and powerful. 
+We can have functional components, react elements, component composition.
+#### {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+3 types will refer to same react functional component. We can write in anyway.

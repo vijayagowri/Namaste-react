@@ -1,3 +1,22 @@
-#heading {
-    color: red;
+body{
+    padding: 0;
+    margin: 0;
 }
+.navbar {
+    display: flex;
+    background-color: black;
+
+  }
+  
+  .navbar .menu {
+    flex:5;
+    display: flex; /* set flexbox */
+    align-items: center; /* align vertically */
+    justify-content:center; /* push to right */
+  }
+  .navbar .icon {
+    display: flex; /* set flexbox */
+    align-items: flex-end; /* align vertically */
+    justify-content:flex-end; /* push to right */
+  }
+  
