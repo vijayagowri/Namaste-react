@@ -5,7 +5,7 @@ body{
 .navbar {
     display: flex;
     background-color: black;
-
+    justify-content: space-between;
   }
   
   .navbar .menu {
@@ -15,8 +15,31 @@ body{
     justify-content:center; /* push to right */
   }
   .navbar .icon {
-    display: flex; /* set flexbox */
+  
+  }
+  .icon ul{
+    display: flex;
+  }
+  .icon ul li{
+    list-style-type: none;
+    color: #fff;
+    padding: 5px;
     align-items: flex-end; /* align vertically */
     justify-content:flex-end; /* push to right */
   }
-  
+
+.app-container {
+  padding: 2rem;
+}
+.resto-card{
+  width: 18%;
+  background: #a29c9c42;
+  border: 1px solid #b5b2b2;
+  margin: 0.2rem;
+  padding: 0.5rem;
+}
+.resto-card:hover{
+border: 1px solid #c4c4c4;
+box-shadow: 5px 5px 5px #c4c4c4;
+
+}
