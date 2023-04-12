@@ -14,9 +14,6 @@ body{
     align-items: center; /* align vertically */
     justify-content:center; /* push to right */
   }
-  .navbar .icon {
-  
-  }
   .icon ul{
     display: flex;
   }
@@ -28,11 +25,8 @@ body{
     justify-content:flex-end; /* push to right */
   }
 
-.app-container {
-  padding: 2rem;
-}
 .resto-card{
-  width: 18%;
+  width: 17.2%;
   background: #a29c9c42;
   border: 1px solid #b5b2b2;
   margin: 0.2rem;
@@ -43,3 +37,24 @@ border: 1px solid #c4c4c4;
 box-shadow: 5px 5px 5px #c4c4c4;
 
 }
+.btn-style{
+  height: 35px;
+  color: #000;
+  background: #cfcfcf;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-style:hover{
+  background-color: gray;
+  color: #cfcfcf;
+}
+
+.search-style{
+  height: 35px;
+    color: #000;
+    background: #fff;
+    border-radius: 6px;
+    margin-left: 7rem;
+
+}
+

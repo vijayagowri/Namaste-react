@@ -118,4 +118,4 @@ With the help of JSX we can have html inside javascript and javascript inside ht
 It is very easy and powerful. 
 We can have functional components, react elements, component composition.
 #### {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
-3 types will refer to same react functional component. We can write in anyway.
+{TitleComponent} is a react element. {<TitleComponent/>} and  {<TitleComponent></TitleComponent>} are refer to react functional component. We can write in anyway.
