@@ -119,3 +119,110 @@ It is very easy and powerful.
 We can have functional components, react elements, component composition.
 #### {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
 {TitleComponent} is a react element. {<TitleComponent/>} and  {<TitleComponent></TitleComponent>} are refer to react functional component. We can write in anyway.
+### Assignment 4 Talk is cheap show me some code
+#### Is JSX mandatory for React?
+Use JSX is not mandatory for React. But with the help of jsx we can reduce code complexity of developing applications. Suppose if we have to create nested div’s without JSX we have to struggle a lot to create react elements  by using React.createElement(tagName,{attributes to the tag}, “text or child elements). Almost its impossible for larger applications. In that case using plain Javascript with HTML is easy instead of React.
+#### Is ES6 mandatory for React?
+With the help of ES6 our development time will reduced and it gives some predefined methods and some new functionalities are very useful in es6. We can use ES5 also but it will take some development effect. Ex: map filter functions in ES6 are very useful. Without map filter we have to use for loop. Suppose if we are not properly declared or not increased ‘i’ value. It will went to infinite loop and browser will hang.
+#### How can I write comments in JSX?
+In between JSX elements we have write comments like this {/* ….. */}
+In JSX inside any javascript code we have to write like this /*  */
+Single line comments -- // 
+Multi line comment -- />/* ….. */
+#### What is Virtual DOM?
+Virtual DOM is  representation of actual dom. The React.createElement construct element object. In Viirtual DOM it will create dom nodes in the form of objects i.e react element. It is easy to find difference in objects instead of html code. JSON object will converted into actual DOM and rendered by ReactDOM.
+#### What is Reconciliation in React? /What is React Fiber?
+Reconciliation or React Fiber both are same. React is very fast because of its reconciliation and diff algorithm. DOM manipulation is a very expensvie task while improving performance of library. React stood in first place in managing fast and efficient DOM manipulations. Because of it re-rendering process. When data or properties or html elements are changed. It will compare differences in old dom and new dom.
+If it is a only property or data update it will update that value without removing the underlying DOM node from a dom tree.
+If element is changed then only it will update dom node. 
+
+Scenario 1: type is a string, type stayed the same across calls, props did not change either.
+// before update
+{ type: 'div', props: { className: 'cn' , title : 'stuff'} }
+
+// after update
+{ type: 'div', props: { className: 'cn' , title : 'stuff'} }
+That is the simplest case: DOM stays the same.
+Scenario 2: type is still the same string, props are different.
+// before update:
+{ type: 'div', props: { className: 'cn' } }
+
+// after update:
+{ type: 'div', props: { className: 'cnn' } }
+
+As type still represents an HTML element,React looks at the attributes of both, React knows how to change its properties through standard DOM API calls, without removing the underlying DOM node from a DOM tree.
+React also knows to update only the properties that changed. For example:
+<div style={{color: 'red', fontWeight: 'bold'}} />
+
+<div style={{color: 'green', fontWeight: 'bold'}} />
+When converting between these two elements, React knows to only modify the color style, not the fontWeight.
+///////When a component updates, the instance stays the same, so that state is maintained across renders. React updates the props of the underlying component instance to match the new element, and calls componentWillReceiveProps() and componentWillUpdate() on the underlying instance. Next, the render() method is called and the diff algorithm recurses on the previous result and the new result. After handling the DOM node, React then recurses on the children.
+Scenario 3: type has changed to a different String, or from String to a component.
+// before update:
+{ type: 'div', props: { className: 'cn' } }
+
+// after update:
+{ type: 'span', props: { className: 'cn' } }
+As React now sees that the type is different, it would not even try to update our node: old element will be removed (unmounted) together with all its children.
+It is important to remember that React uses === (triple equals) to compare type values, so they have to be the same instances of the same class or the same function.
+#### Why we need keys in React? When do we need keys in React?
+Keys help React to identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
+At the time of DOM re rendering, it is easily understood by react to identify the changed elements. If no unique key found it will rerender the entire dom sometimes. It might be a performance issue when we have adding or removing elements in the dom.
+#### Can we use index as keys in React?
+It is not recommended to use index as key. If no unique constrain found in object it is ok to use but it might create some performance issue when we have adding or deleting elements in DOM.
+#### What is props in React? Ways to
+Props is properties or objects which need to pass to an component. With props only we will send data to components as parameters.
+#### What is a Config Driven UI ?
+Config driven is nothing but configuring webpage dynamically when data changes. Per suppose if we have one app which need to show some differences in UI per different locations. We wont create a different websites for different locations.
+Based on configuration check we will show or hide particular sections.
+Ex; offers applicable to particular location. Best places or restaurants or hotels on location.
+Data will drive the application.
+What is the difference between Named Export, Default Export and * as export
+In one page if we have only one export then we will use export default component.
+If more than one  is exporting in one page then we have to use named export. 
+Export API_URL = http:///www.**.com;
+Export NAME = “Name”
+1st Method:-
+export foo; //so that this can be used in other file
+
+import {foo} from 'abc'; //importing data/fun from module
+2nd Method:-
+export default foo;  //used in one file
+
+import foo from 'blah'; //importing data/fun from module
+3rd Method:-
+export = foo;
+
+import * as foo from 'blah';
+The above methods roughly compile to the following syntax below:-
+//all export methods
+exports.foo = foo; //1st method
+exports['default'] = foo; //2nd method
+module.exports = foo; //3rd method
+//all import methods
+var foo = require('abc').foo; //1st method
+var foo = require('abc')['default']; //2nd method
+var foo = require('abc'); //3rd method
+#### What are React Hooks?
+React hooks are useState and useEffect. React core concepts to make react fast and efficient.
+Why do we need a useState Hook
+useState hook will automatically or we could say auto magically updates the ui whenever data get changes or modifies. It will make UI in sync with data.
+Let userList = [1,2]
+const [userList, setuserList] = useState(userList);
+console.log(userList) gives 1,2 
+userList.push(3)  3 will be added in data layer but it will not reflect in UI
+setuserList (userList); console.log(userList)  gives 1,2,3 in Data and UI also.
+useState will watch the variable and updates the ui when there is a change.
+#### Optional chaining in Javascript
+Optional chaining is nothing just to chec whether that variable is existed on particular element or not. Without if that array is undefined it wouldn’t thwoe any error. 
+const adventurer = {
+  name: 'Alice',
+  cat: {
+    name: 'Dinah'
+  }
+};
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
