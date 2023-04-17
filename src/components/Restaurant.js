@@ -1,10 +1,10 @@
-import { RESTAURANT_IMAGES_URL } from "../Utilis/constants";
+import { RESTAURANT_IMAGES_URL } from '../utilis/constants'
 
 const RestoComponent = (props)=>{
     const {resObj} = props; 
     const {cloudinaryImageId, name, cuisines, avgRating, deliveryTime} = resObj.data;
     return (
-           <div className="resto-card">
+           <div className="">
            <img alt="" src={ RESTAURANT_IMAGES_URL + cloudinaryImageId }/> 
                 <h3>{name}</h3>
                 <h4>{cuisines.join(", ")}</h4>

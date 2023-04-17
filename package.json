@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "namaste react tutorial",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -26,10 +26,14 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "sort-by": "^0.0.2"
   },
-  "browsersList":  [
+  "browsersList": [
     "last 2 versions"
   ]
 }

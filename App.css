@@ -31,6 +31,8 @@ body{
   border: 1px solid #b5b2b2;
   margin: 0.2rem;
   padding: 0.5rem;
+  text-decoration: none;
+  color: black;
 }
 .resto-card:hover{
 border: 1px solid #c4c4c4;
@@ -57,4 +59,15 @@ box-shadow: 5px 5px 5px #c4c4c4;
     margin-left: 7rem;
 
 }
+.restro-shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
 
+.menu {
+  display: flex
+}
+.menu ul{
+  list-style: none;
+}
