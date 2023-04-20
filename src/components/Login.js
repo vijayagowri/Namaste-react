@@ -1,7 +1,11 @@
 const Login = () =>{
-    return (
-        <h1>this is loginpage</h1>
-    )
+    [userData, setUserData] = useState({});
+		return (
+			<>
+				<h1>this is login page</h1>
+				<input type="text" />
+			</>
+		);
 }
 
 export default Login;
