@@ -1,6 +1,8 @@
 import ProfileClass from "./ProfileClass";
 import Profile from "./Profile";
 import { Component } from "react";
+import UsersContext from "../utilis/Hooks/UsersContext";
+
 class About extends Component {
 	constructor(props) {
 		super(props);
@@ -9,6 +11,13 @@ class About extends Component {
 	render() {
 		return (
 			<div>
+				<UsersContext.Consumer>
+					{({ user }) => (
+						<h1>
+							{user.name} {user.email}
+						</h1>
+					)}
+				</UsersContext.Consumer>
 				<h1>This is about Class component</h1>
 			</div>
 		);

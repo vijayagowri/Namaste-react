@@ -1,7 +1,9 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import UsersContext from "../utilis/Hooks/UsersContext";
 
 const Header = () => {
+	const { user } = useContext(UsersContext);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	function login() {
 		setIsLoggedIn(true);
@@ -77,6 +79,9 @@ const Header = () => {
 						<Link to="/profile">Profile</Link>
 					</li>
 				</ul>
+			</div>
+			<div className="text-white">
+				{user.name} {user.email}
 			</div>
 			<div>
 				{!isLoggedIn ? (

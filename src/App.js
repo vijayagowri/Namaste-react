@@ -10,15 +10,22 @@ import Login from "./components/Login";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ShimmerCards from "./utilis/ShimmerCards";
 import Products from "./components/Products";
+import UsersContext from "./utilis/Hooks/UsersContext";
 
 const AppLayout = () => {
+	const [user, setUser] = useState({
+		name: "gowri",
+		email: "gowri@gmail.com",
+	});
 	return (
 		<div className="app-container">
-			<Header />
-			<div className="min-h-screen">
-				<Outlet />
-			</div>
-			<Footer />
+			<UsersContext.Provider value={{ user: user, setUser: setUser }}>
+				<Header />
+				<div className="min-h-screen">
+					<Outlet />
+				</div>
+				<Footer />
+			</UsersContext.Provider>
 		</div>
 	);
 };
