@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import UsersContext from "../utilis/Hooks/UsersContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
 	const { user } = useContext(UsersContext);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const cartItems = useSelector((state) => state.cart.items);
 	function login() {
 		setIsLoggedIn(true);
 		console.log(isLoggedIn);
@@ -74,9 +76,12 @@ const Header = () => {
 					<li>
 						<Link to="/products">Products</Link>
 					</li>
-					<li>Cart</li>
+
 					<li>
 						<Link to="/profile">Profile</Link>
+					</li>
+					<li>
+						<Link to="/cart">Cart {cartItems.length} items</Link>
 					</li>
 				</ul>
 			</div>

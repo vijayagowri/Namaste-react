@@ -11,6 +11,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import ShimmerCards from "./utilis/ShimmerCards";
 import Products from "./components/Products";
 import UsersContext from "./utilis/Hooks/UsersContext";
+import store from "./components/store";
+import { Provider } from "react-redux";
+import Cart from "./components/Cart";
 
 const AppLayout = () => {
 	const [user, setUser] = useState({
@@ -19,13 +22,15 @@ const AppLayout = () => {
 	});
 	return (
 		<div className="app-container">
-			<UsersContext.Provider value={{ user: user, setUser: setUser }}>
-				<Header />
-				<div className="min-h-screen">
-					<Outlet />
-				</div>
-				<Footer />
-			</UsersContext.Provider>
+			<Provider store={store}>
+				<UsersContext.Provider value={{ user: user, setUser: setUser }}>
+					<Header />
+					<div className="min-h-screen">
+						<Outlet />
+					</div>
+					<Footer />
+				</UsersContext.Provider>
+			</Provider>
 		</div>
 	);
 };
@@ -66,6 +71,10 @@ const routes = createBrowserRouter([
 			{
 				path: "/products",
 				element: <Products />,
+			},
+			{
+				path: "/cart",
+				element: <Cart />,
 			},
 			{
 				path: "/profile",

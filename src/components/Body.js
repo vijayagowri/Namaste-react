@@ -11,7 +11,6 @@ import UsersContext from "../utilis/Hooks/UsersContext";
 
 const Body = () => {
 	const { user, setUser } = useContext(UsersContext);
-	console.log(user);
 	const displatFlex = { display: "flex", flexWrap: "wrap" };
 	let [allRestaurants, setAllRestaurants] = useState([]);
 	let [filteredRestaurants, setFilteredRestaurants] = useState([]);
