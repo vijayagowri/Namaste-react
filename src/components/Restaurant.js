@@ -6,7 +6,7 @@ const RestoComponent = (props) => {
 	const { user } = useContext(UsersContext);
 	const { resObj } = props;
 	const { cloudinaryImageId, name, cuisines, avgRating, deliveryTime } =
-		resObj.data;
+		resObj.info;
 	return (
 		<div>
 			<img alt="" src={RESTAURANT_IMAGES_URL + cloudinaryImageId} />
